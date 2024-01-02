@@ -4,14 +4,11 @@ import { useParams } from "react-router-dom";
 import axios from "../../../api/axios";
 
 const Cours = () => {
-  let [cours, setCours] = useState(true);
+
   let {id_filiere}=useParams();
   let [showCours,setShowCours]=useState("")
   let [nomFiliere,setNomFiliere]=useState("")
 
-  let handleClick = () => {
-    setCours(!cours);
-  };
   useEffect(()=>{
     axios.post("/user/getspecifyMatiere",{id_filiere})
     .then((res)=>{
@@ -21,14 +18,14 @@ const Cours = () => {
     .catch((error)=>{
       console.log("error")
     })
-  },[])
+  },[id_filiere])
   useEffect(()=>{
     axios.post("/user/getFiliereName",{id_filiere})
     .then((res)=>{
      
       setNomFiliere(res.data)
     })
-  },[])
+  },[id_filiere])
 
   return (
     <div className={styles.container}>

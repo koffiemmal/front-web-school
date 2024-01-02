@@ -16,20 +16,19 @@ const Header = ({nom}) => {
 
 //fixation de l'accestoken
 
+const stockAccessToken = localStorage.getItem('accessToken')
+
 let { auth, setAuth } = useContext(UserContext) || {};
 
 useEffect(()=>{
 
-  const stockAccessToken = localStorage.getItem('accessToken')
-
-
-  if(stockAccessToken){
+  if(stockAccessToken && auth.token !== stockAccessToken){
 
     setAuth({...auth,token:stockAccessToken})
 
   }
 
-},[])
+},[auth,setAuth,stockAccessToken])
 
 
    let [nomSug,setNomSug]=useState("")

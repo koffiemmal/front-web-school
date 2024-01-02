@@ -1,4 +1,4 @@
-import { NavLink, useNavigate, useParams } from "react-router-dom";
+import { NavLink, useNavigate} from "react-router-dom";
 import style from "../Login/Login.module.css"
 import { useContext, useState } from "react";
 import axios from "../../../api/axios";
@@ -15,12 +15,6 @@ const Login =()=>{
     let [motDePasseInput,setMotDePasseInput]=useState("")
 
     let { auth, setAuth } = useContext(UserContext) || {};
-
-    let nomUtilisatuer ;
-
-    let {id_filiere}=useParams()
-
-    
     
     let navigate = useNavigate()
 
@@ -36,7 +30,6 @@ const Login =()=>{
     .then((res)=>{
         console.log(res.data);
        console.log(res.data.nom_user)
-        nomUtilisatuer = res.data.nom_user 
         localStorage.setItem('nomUtilisateur',res.data.nom_user )
 
 })
