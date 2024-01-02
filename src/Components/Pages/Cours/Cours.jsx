@@ -34,7 +34,7 @@ const Cours = () => {
     <div className={styles.container}>
      {nomFiliere && nomFiliere.map((nom,index)=>{
       return(
-        <h1>{nom.nom_filiere}</h1>
+        <h1 key={index}>{nom.nom_filiere}</h1>
       )
      })}
       <div>
@@ -45,10 +45,10 @@ const Cours = () => {
              <div key={index}>
         
               <section className={styles.cours}>
-                <p>
-                  Matiere:<h2>{element.nom_matiere}</h2>     | Durée:<h3>{element.duree_matiere} heures </h3> |     Description: {element.description_matiere} <br />
+              
+                  Matiere :<h2>{element.nom_matiere}</h2>     | Durée:<h3>{element.duree_matiere} heures </h3> |     Description: {element.description_matiere} <br />
                   <button >Commencer</button>
-                </p>
+                
                 
               </section>
           
