@@ -11,7 +11,7 @@ import Signin from "./Components/Pages/SignIN/Signin";
 import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
 import Admin from "./Components/Pages/Admin/Admin";
 import Apropos from "./Components/Pages/Apropos/Apropos";
-import Acceuil_Connect from "./Components/Pages/Acceuil_Connect/Acceuil_Connect";
+import AcceuilConnect from "./Components/Pages/Acceuil_Connect/AcceuilConnect";
 
 
 
@@ -35,9 +35,9 @@ function App() {
 <Route index element={<Activite/>}/>
   </Route>
 
-  <Route path="Acceuil_Connect"element={<ProtectedRoute/>}>
+  <Route path="AcceuilConnect"element={<ProtectedRoute/>}>
 
-<Route index element={<Acceuil_Connect/>}/>
+<Route index element={<AcceuilConnect/>}/>
   </Route>
   
   

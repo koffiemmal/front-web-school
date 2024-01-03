@@ -167,7 +167,6 @@ onSubmit={(e)=>{
                     }}>
                         <option value=""></option>
                         {containerfiliere && containerfiliere.map((liste,index)=>{
-                            let id= {id_filiere:liste.id_filiere}
                          
                             return(
 

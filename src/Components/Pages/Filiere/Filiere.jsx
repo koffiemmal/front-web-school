@@ -3,8 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import style from "../Filiere/Filiere.module.css"
-import { useNavigate,Link } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from "../../../api/axios"
 
 
@@ -17,13 +16,9 @@ const Filiere = ()=>{
     axios.get("/user/liste").then(res=>{
 setContainerFiliere(res.data)
 
-console.log(ContainerFiliere)
-
 })
-},[]
+},[ContainerFiliere]
 )
-
- 
 
     const setting={
         dots:true,
@@ -33,8 +28,6 @@ console.log(ContainerFiliere)
         slidesToScroll:1
 
     }
-
-    let navigate = useNavigate()
 
     return(
      

@@ -1,6 +1,6 @@
 import style from "../Acceuil/Acceuil.module.css"
 
-const Acceuil_Connect=()=>{
+const AcceuilConnect=()=>{
 
     return(
         <div className={style.Acceuil}>
@@ -24,4 +24,4 @@ Découvrez l'excellence éducative au cœur de notre école. Nous nous engageons
     )
 
 }
-export default Acceuil_Connect;
+export default AcceuilConnect;

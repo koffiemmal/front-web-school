@@ -45,7 +45,7 @@ const Login =()=>{
          
             localStorage.setItem('id_user',res.data.id_user)
          
-            navigate({pathname: "/Acceuil_Connect", state: { nomUtilisatuer: res.data.nom_user }})
+            navigate({pathname: "/AcceuilConnect", state: { nomUtilisatuer: res.data.nom_user }})
   
 
         
